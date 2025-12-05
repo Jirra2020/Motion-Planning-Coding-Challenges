@@ -49,6 +49,7 @@ vector<pair<int,int>> count_func(vector<interval> &intervals)
         else
         {
             count_exp.push_back({merged[i-1].second, count});
+            //resetting the counter
             count = 1;
         }
     }

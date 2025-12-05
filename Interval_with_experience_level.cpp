@@ -26,7 +26,11 @@ vector<pair<int,int>> count_func(vector<interval> &intervals)
         if (intervals[i].first.first < index1.second)
         {   merged.pop_back();
             index1.second = max(index1.second, intervals[i].first.second);
+<<<<<<< Updated upstream
          // Use index itself instaed of intervals[i-1].second
+=======
+            // take max experience level
+>>>>>>> Stashed changes
             index2 = max(index2, intervals[i].second); 
             merged.push_back({{index1.first, index1.second},index2});
         }
@@ -69,4 +73,5 @@ int main()
     {
         cout  << p.first << "  " << p.second << endl;
     }
+    return 0;
 }

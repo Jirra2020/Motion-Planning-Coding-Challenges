@@ -26,7 +26,7 @@ vector<pair<int,int>> count_func(vector<interval> &intervals)
         if (intervals[i].first.first < index1.second)
         {   merged.pop_back();
             index1.second = max(index1.second, intervals[i].first.second);
-            index2 = max(intervals[i-1].second, intervals[i].second); 
+            index2 = max(index2, intervals[i].second); 
             merged.push_back({{index1.first, index1.second},index2});
         }
         else
